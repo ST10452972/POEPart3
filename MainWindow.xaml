@@ -1,0 +1,81 @@
+﻿<Window x:Class="chatbotp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cybersecurity Chatbot" Height="650" Width="900"
+        Background="#1E1E1E"
+        FontFamily="Consolas" FontSize="14">
+    <Grid Margin="10">
+        <!-- ASCII Art -->
+        <TextBlock x:Name="AsciiArtBlock"
+                   FontSize="14"
+                   Foreground="Lime"
+                   Height="100"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top" />
+
+        <!-- Chat Display -->
+        <ListBox x:Name="ChatList"
+                 Margin="0,110,220,100"
+                 Background="#111"
+                 Foreground="White" />
+
+        <!-- User Input -->
+        <TextBox x:Name="UserInput"
+                 Height="30"
+                 Margin="0,0,220,50"
+                 VerticalAlignment="Bottom"
+                 Background="#222"
+                 Foreground="White" />
+
+        <Button Content="Send"
+                Width="80"
+                Height="30"
+                Margin="0,0,130,50"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Click="SendButton_Click" />
+
+        <!-- Task Assistant -->
+        <GroupBox Header="Task Assistant"
+                  Margin="680,0,0,300"
+                  HorizontalAlignment="Left"
+                  Width="200"
+                  Foreground="White">
+            <StackPanel Margin="5">
+                <TextBox x:Name="TaskInput"
+                         Text="Enter task..."
+                         Foreground="Gray"
+                         Margin="0,5,0,5" />
+                <Button Content="Add Task"
+                        Click="AddTask_Click"
+                        Margin="0,5,0,5" />
+                <ListBox x:Name="TaskList"
+                         Height="150"
+                         Background="#222"
+                         Foreground="White" />
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Quiz Section -->
+        <GroupBox Header="Quiz"
+                  Margin="680,320,0,0"
+                  Width="200"
+                  Height="280"
+                  Foreground="White">
+            <StackPanel Margin="5">
+                <TextBlock x:Name="QuizQuestion"
+                           Text="Click Start Quiz"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,10"
+                           Foreground="White"/>
+                <TextBox x:Name="QuizAnswer"
+                         Margin="0,0,0,5" />
+                <Button Content="Submit Answer"
+                        Click="SubmitQuizAnswer_Click"
+                        Margin="0,0,0,5" />
+                <Button Content="Start Quiz"
+                        Click="StartQuiz_Click" />
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
