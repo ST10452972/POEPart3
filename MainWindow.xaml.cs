@@ -21,10 +21,30 @@ namespace chatbotp3
             AddChat("Bot", "Welcome to the Cybersecurity Awareness Chatbot!\nType a question or command.");
         }
 
-        private void LoadAsciiArt()
+        private void DisplayAsciiArt()
         {
-            if (File.Exists("Resources/ascii_logo.txt"))
-                AsciiArtBlock.Text = File.ReadAllText("Resources/ascii_logo.txt");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(@" 
+       
+         CYBERSECURITY AWARENESS 
+                 BOT             
+        
+        ");
+            Console.ResetColor();
+        }
+        private void DisplayAsciiComputer()
+        {
+            Console.WriteLine(@"
+      .__________________________.
+      | .______________________. |
+      | |      ^  -  ^         | |
+      | |      (o)  (o)        | |
+      | |         --           | |
+      | |      \_______/       | |
+      | |______________________| |
+      |__________________________|
+    
+    ");
         }
 
         private void PlayVoiceGreeting()
