@@ -16,7 +16,8 @@ namespace chatbotp3
         {
             InitializeComponent();
             chatbot = new ChatbotLogic();
-            LoadAsciiArt();
+            DisplayAsciiArt();
+            DisplayAsciiComputer();
             PlayVoiceGreeting();
             AddChat("Bot", "Welcome to the Cybersecurity Awareness Chatbot!\nType a question or command.");
         }
